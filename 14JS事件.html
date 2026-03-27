@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS事件</title>
+</head>
+<body>
+    <button onclick="onclick_event()">请点击</button>
+    <input type="text" onfocus="onfocus_event()" onblur="onblur_event()" placeholder="你好">
+    <script>
+        function onclick_event()
+        {
+            alert('no touch!!');
+        }
+        function onfocus_event()
+        {
+            console.log('进入输入框');
+        }
+        function onblur_event()
+        {
+            console.log('退出文本框！');
+        }
+    </script>
+</body>
+</html>

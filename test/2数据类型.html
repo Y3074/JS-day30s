@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataTypes</title>
+</head>
+<body>
+    <script>
+        let word = 'JavaScript'
+        console.log(word[0])
+        word[0] = 'B'
+        console.log(word[0])
+        let num1 = 3
+        let num2 = 3
+        console.log(num1 == num2)
+        let nums = [1,2,3]
+        nums[0] = 4
+        console.log(nums[0])
+        let numbers = [1,2,3]
+        console.log(nums == numbers)
+        let userOne = {
+            name : 'Y',
+            role:'T',
+            country:'China'
+        }
+        let userTwo = {
+            name:'Y',
+            role:'T',
+            country:'China'
+        }
+        console.log(userOne == userTwo)
+        console.log(typeof userOne)
+        const PI = Math.PI
+        console.log(PI)
+        console.log(Math.round(PI))
+        console.log(Math.round(9.8))
+        console.log(Math.floor(PI))
+        console.log(Math.floor(9.8))
+        console.log(Math.ceil(PI))
+        console.log(Math.min(-5,1,2,3))
+        console.log(Math.max(12,1,56))
+        // 0 - 10
+        const randNum = Math.random() * 11
+        console.log(randNum)
+        console.log(Math.abs(-10))
+        console.log(Math.sqrt(100))
+        console.log(Math.pow(3,2))
+
+        console.log(Math.log(2))
+        console.log(Math.sin(1))
+        console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?') // line break
+        console.log('Days\tTopics\tExercises')
+        console.log('Day 1\t3\t5')
+        console.log('Day 2\t3\t5')
+        console.log('Day 3\t3\t5')
+        console.log('Day 4\t3\t5')
+        console.log('This is a backslash  symbol (\\)') // To write a backslash
+        console.log('In every programming language it starts with \"Hello, World!\"')
+        console.log("In every programming language it starts with \'Hello, World!\'")
+        console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
+
+        // printf cout
+        let a = 2 
+        let b = 3
+        console.log(`The sum is ${a + b}`)
+        console.log(`${b} is greater than ${a} such as ${a<b}`)
+
+        let js = 'javascript'
+        let upper = "JS"
+        console.log(js.length)
+        console.log(js.toUpperCase())
+        console.log(upper.toLowerCase())
+        console.log(js.substr(4,5))
+        console.log(js.substring(0,3))
+        console.log(js.split(''))
+
+        let num = '10'
+        let num11 = '9.8'
+        let numInt = Number(num)
+        let numFloat = Number(num11)
+        console.log(numInt,numFloat)
+        let js1 = 'JavaScript'
+        console.log(js1[Math.round(Math.random()*11)])
+        let js2 = 'You cannot end a sentence with because because because is a conjunction'
+        console.log(js2.match('because'))
+        
+    </script>
+</body>
+</html>

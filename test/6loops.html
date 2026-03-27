@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+        let sum = 0;
+        const num = [1,2,3,4,5]
+        const country = [1,2,3,4,5]
+        const webTech = ['HTML','CSS','JavaScript','React','Redux','Node','MongoDB']
+        const newArr = []
+        for(let i = 0; i < country.length; i++){
+            newArr.push(country[i] ** 2)
+        }
+        console.log(newArr)
+        let j = 0;
+        while(j <= 5){
+            console.log(j)
+            j++
+        }
+        for(const p of num)
+        {
+            console.log(p)
+        }
+        for(k of num){
+            sum += k
+            console.log(sum)
+        }
+        
+        for(const l of webTech) console.log(l.toUpperCase())
+        console.log('******test6 above*****')
+    </script>
+    <script src="/js/test6.js"></script>
+</body>
+</html>

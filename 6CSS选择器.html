@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /* 元素选择器 */
+        h1 {
+            color: aqua;
+        }
+        /* 类选择器 */
+        .class {
+            color:red;
+        }
+        /* ID选择器 */
+        #id {
+            color: aquamarine;
+        }
+        /* 通用选择器 */
+        * {
+            font-family: 'KaiTi';
+        }
+        /* 子元素选择器 */
+        .father > .son {
+            background-color: yellow;
+        }
+        /* 后代选择器 */
+        div p {
+            color: blueviolet;
+        }
+        /* 并集选择器 */
+        h4 + h5 {
+            background-color: aquamarine;
+        }
+        /* 伪类选择器 */
+        .element:hover {
+            color:cadetblue
+        }
+    </style>
+</head>
+<body>
+    <h1>不同类型的选择器</h1>
+    <h2 class="class">类选择器</h2>
+    <h2 id="id">ID选择器</h2>
+    <hr>
+    <div class="father">
+        <div class="son">子元素</div>
+        <p>第一段</p>
+        <div>
+            <p class="grandson">第二段</p>
+        </div>
+    </div>
+    <h4>第四号标签</h4>
+    <h5 class="element">第五号标签</h5>
+
+</body>
+</html>

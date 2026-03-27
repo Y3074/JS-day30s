@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .father {
+            background-color:blue;
+            /* height:200px; */
+            border:10px solid yellow;
+            /* 不设置高度出现了坍塌 解决办法1： */
+            /* overflow: hidden; */
+        }
+        .left-son {
+            width:200px;
+            height:200px;
+            background-color: antiquewhite;
+            float:left;
+        }
+        .right-son {
+            float:right;
+            width: 200px;
+            height:200px;
+            background-color: red;
+        }
+        .father::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="left-son">左浮动</div>
+        <div class="right-son">右浮动</div>
+    </div>
+</body>
+</html>

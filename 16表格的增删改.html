@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格的增删改</title>
+    <style>
+        th,td{
+            
+            border:1px solid gray; 
+            text-align: center;
+            padding:5px;
+        }
+        th{
+            background-color:gray;
+        }
+        table{
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">表格的增删改查</h1>
+    <hr>
+    <button onclick="adddata()">新增数据</button>
+    <table id = 'table'>
+        <tr>
+            <th>姓名</th>
+            <th>联系方式</th>
+            <th>操作方式</th>
+        </tr>
+        <tr>
+            <td>尹蒙旗</td>
+            <td>15542081142</td>
+            <td><button onclick="editdata(this)">编辑</button><button onclick="deletedata(this)">删除</button></td>
+        </tr>
+    </table>
+    <script src="/js/table.js"></script>
+</body>
+</html>
