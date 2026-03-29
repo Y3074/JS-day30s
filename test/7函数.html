@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [1, 2, 3, 4, 5]
+        function print(){
+            let name = 'Yin'
+            let lastname = 'mengqi'
+            let fullname = name + lastname
+            return fullname
+        }
+        function area(r){
+            let area1 = Math.PI * r * r
+            return area1
+        }
+        function cover(x, y){
+            let coverary = x * y
+            return coverary
+        }
+        function addation(arr){
+            let sum = 0
+            for(let i = 0; i < arr.length; i++){
+                sum += arr[i]
+            }
+            return sum
+        }
+        //正则函数参数无限
+        function sumAll(){
+            console.log(arguments)
+        }
+        //箭头函数中的参数无限
+        const sumAllNums = (...args) => {
+            console.log(args)
+        }
+        //匿名函数
+        const anonymous = function(){
+            console.log('I am a anonymous function')
+        }
+        //表达式函数
+        const square = function(n){
+            return n * n
+        }
+        //自调用函数
+        let squareNum = (function(n){
+            return n * n
+        })(10)
+        //箭头函数
+        const squ = n =>{
+            return n * n
+        }
+        //带有默认参数的方法
+        function greetings(name = 'Peter'){
+            let message = `${name}, welcome to 30day07 JS`
+            return message
+        }
+        //默认参数箭头函数写法
+        const functionName = (name = 'Sam') =>{
+            let message = `${name}, welcome to 30day07 JS`
+            return message
+        }
+        console.log(print())
+        console.log(area(2))
+        console.log(cover(10, 5))
+        console.log(addation(numbers))
+        sumAll([1,2,3,4])
+        sumAll(1,2,3,4)
+        sumAllNums(1,2,3,4)
+        sumAllNums([1,2,3,4])
+        anonymous()
+        console.log(square(2))
+        console.log(squareNum)
+        console.log(squ(5))
+        console.log(greetings())
+        console.log(greetings('Alice'))
+        console.log(functionName('YMQ'))
+    </script>
+</body>
+</html>
