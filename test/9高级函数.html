@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09days</title>
+</head>
+<body>
+    <script>
+        const callback = (n) => {
+            return n**2
+        }
+        function cube(callback, n){
+            return callback(n) * n
+        }
+        console.log(cube(callback,3))
+
+        const higherOrder = n =>{
+            const doSomething = m =>{
+                const doWhatEver = t =>{
+                    return 2 * n + 3 * m + t
+                }
+                return doWhatEver
+            }
+            return doSomething
+        }
+        console.log(higherOrder(2)(2)(10))
+
+        const numbers = [1,2,3,4,5]
+        const sumArray = arr =>{
+            let sum = 0
+            const callback = function(element){
+                sum += element
+            }
+            arr.forEach(callback)
+            return sum
+        }
+        console.log(sumArray(numbers))
+        
+        function sayHello(){
+            console.log('hello')
+        }
+        // setInterval(sayHello,1000)
+        function sayhello(){
+            console.log('hello')
+        }
+        // setTimeout(sayhello,3000)
+
+        let sum = 0
+        const number = [1,2,3,4,5]
+        number.forEach(num => sum += num)
+        console.log(sum)
+
+        const cou = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
+        cou.forEach(ele => console.log(ele))
+
+        const numberSqu = number.map(num => num ** 2)
+        console.log(numberSqu)
+
+        const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
+        const nameToUp = names.map(name => name.toLocaleUpperCase())
+        console.log(nameToUp)
+        const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya',
+]
+        const coun = countries.filter(co => co.includes('land'))
+        console.log(coun)
+        const num = [1,2,3,4,5]
+        const sum1 = num.reduce((acc,cur)=> acc + cur, 0)
+        console.log(sum)
+        
+        const nam = ['a1','b1','c1']
+        const areAllstr = nam.every(name => typeof name === 'string')
+        console.log(areAllstr)
+
+        const ages = [24, 22, 25, 32, 35, 18]
+        const age = ages.find(age => age < 20)
+        console.log(age)
+
+        const bools = [true, true, true, true]
+
+        const areSomeTrue = bools.some((b) =>  b === true)
+
+        console.log(areSomeTrue) //true
+
+        const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+        console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
+        //Now the original products array  is also sorted
+
+        
+    </script>
+</body>
+</html>
