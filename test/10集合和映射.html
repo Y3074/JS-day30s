@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set maps</title>
+</head>
+<body>
+    <script>
+        const com = new Set()
+        console.log(com)
+
+        const lan = [
+            'a',
+            'b',
+            'c',
+            'd'
+        ]
+        const setlan = new Set(lan)
+        console.log(setlan)
+
+        for(const l of setlan)
+            console.log(l)
+        // const com = new Set()
+        console.log(com.size)
+        com.add('d')
+        com.add('e')
+        com.add('f')
+        console.log(com)
+        console.log(com.size)
+
+        com.delete('d')
+        console.log(com)
+
+        console.log(com.has('e'))
+        console.log(com.has('j'))
+
+        com.clear()
+        console.log(com)
+
+        //计算数组中唯一的数字个数
+        const numbers = [5, 3, 2, 5, 5, 9, 4, 5]
+        const setnum = new Set(numbers)
+        console.log(setnum.size)
+
+        //集合的并集
+        let a = [1,2,3,4,5]
+        let b = [3,4,5,6]
+        let c = [...a,...b]
+        let B = new Set(b)
+        let C = new Set(c)
+        console.log(C)
+
+        //集合a,b的交集
+        let c1 = a.filter(num => B.has(num))
+        let C1 = new Set(c1)
+        console.log(C1)
+
+        //集合的差异
+        let c2 = a.filter(num => !B.has(num))
+        let C2 = new Set(c2)
+        console.log(C2)
+         
+        const map = new Map()
+        console.log(map)
+
+        coun = [['A1','a1'],['B1','b1'],['C1','c1'],['D1','d1']]
+        const map1 = new Map(coun)
+        console.log(map1)
+
+        // const map = new Map()
+        console.log(map)
+        map.set('F1','f1')
+        console.log(map)
+
+        console.log(map.get('F1'))
+
+        //检查存在
+        console.log(map.has('F1'))
+        console.log(map.has('f1'))
+
+        for(const [a,b] of coun)
+            console.log(a,b)
+
+    </script>
+</body>
+</html>
