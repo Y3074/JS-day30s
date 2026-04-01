@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [1,2,3]
+        let [num1,num2,num3] = numbers
+        console.log(num1,num2,num3)
+
+        const names = ['Asabeneh', 'Brook', 'David', 'John']
+        let [first,second,third,fourth] = names
+        console.log(first,second,third,fourth)
+
+        const fullstack = [['html','css','js'],['node','express','mongdb']]
+        const [front,behind] = fullstack
+        console.log(front,behind)
+
+        const number = [1,2,3]
+        let [num4, ,num5] = number
+        console.log(num4, num5)
+
+        //未定义
+        const name1 = [undefined, 'brook', 'david']
+        let [firstper = 'asab', 
+            secondper,
+            thirdper,
+            fourthper = 'john'
+        ] = name1
+        console.log(firstper,secondper,thirdper,fourthper)
+
+        //前者解构，剩余部分用扩散算子
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let [num7, num8, ...rest] = nums
+        console.log(num7, num8)
+        console.log(rest)
+
+        const coun = [['Finland', 'Helsinki'], ['Sweden', 'Stockholm'], ['Norway', 'Oslo']]
+        for(const [country,city] of coun)
+            console.log(country,city)
+
+        const full = [
+            ['HTML', 'CSS', 'JS', 'React'],
+            ['Node', 'Express', 'MongoDB']
+        ]
+        for(const[a,b,c] of full)
+            console.log(a,b,c)
+
+        const rec = {
+            width: 20,
+            height: 10,
+            area: 200
+        }
+        let {width, height,area, per} = rec
+        console.log(width,height,area,per)
+
+        //对象解构更名
+        const rec1 = {
+            width: 20,
+            height: 10,
+            area: 200
+        }
+        let {width:w,height:h,area:a,per:p} = rec1
+        console.log(w,h,a,p)
+
+        const rec2 = {
+            width2: 20,
+            height2: 10,
+            area2: 200,
+            per2 : 80
+        }
+        //per2 = 60被赋予默认值 当对象没给数的时候 使用默认值 反之使用对象内的数据
+        let {width2, height2,area2, per2 = 60} = rec2 
+        console.log(width2,height2,area2,per2)
+
+        const rect = {
+            width:20,
+            height:10
+        }
+        const cal = rec =>{
+            return 2 * (rec.width + rec.height)
+        }
+        console.log(cal(rect))
+
+        const calcu = ({width, height}) =>{
+            return 2 * (width + height)
+        }
+        console.log(calcu(rect))
+
+        const todoList = [
+{
+  task:'Prepare JS Test',
+  time:'4/1/2020 8:30',
+  completed:true
+},
+{
+  task:'Give JS Test',
+  time:'4/1/2020 10:00',
+  completed:false
+},
+{
+  task:'Assess Test Result',
+  time:'4/1/2020 1:00',
+  completed:false
+}
+]
+
+for (const {task, time, completed} of todoList){
+  console.log(task, time, completed)
+}
+
+    //扩展或静止算符
+    const nums1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let [nu1, nu2, ...restnum] = nums1
+    console.log(num1,num2)
+    console.log(restnum)
+    
+    //扩散算符到复制数组
+    const evens = [...nums1]
+    console.log(evens)
+
+    const front1 = ['HTML', 'CSS', 'JS', 'React']
+    const back = ['Node', 'Express', 'MongoDB']
+    const fullsta = [...front1,...back]
+    console.log(fullsta)
+
+    const user = {
+        name:'yin',
+        xing:'mengqi',
+        age:24
+    }
+    const copy = {...user}
+    console.log(copy)
+
+    //复制时修改或者更改对象
+    const cop = {...user,age:18}
+    console.log(cop)
+
+    //带箭头函数的扩散算符
+    const sunnum = (...args) =>{
+        console.log(args)
+    }
+    sunnum(1,2,3,4,5)
+
+    const sunnum1 = (...args) =>{
+        let sum = 0
+        for(const nums of args)
+            sum += nums
+        return sum
+    }
+    console.log(sunnum1(1,2,3,4,5))
+
+    
+    </script>
+</body>
+</html>
