@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pattern = 'love'
+        let regEx = new RegExp(pattern)
+        console.log(regEx)
+        
+        let flag = 'gi'
+        let regEx1 = new RegExp(pattern,flag)
+        console.log(regEx1)
+
+        let regEx2 = new RegExp("love",'gi')
+        console.log(regEx2)
+
+        //regEx2 === regEx3
+        let regEx3 = /love/gi
+        
+        // RegExpp 对象方法
+        //test 匹配测试
+        // const str = 'I love JS'
+        // const pattern1 = /love/
+        // const result = pattern1.test(str)
+        // console.log(result)
+        const str = 'I love JS'
+        const pattern1 = /love/gi
+        const result = pattern1.test(str)
+        console.log(result)
+
+
+        //match() 包含所有匹配的数组
+        const result1 = str.match(pattern1)
+        console.log(result1)
+
+        //search() 测试字符串中的匹配,失败返回-1
+        const result3 = str.search(pattern1)
+        console.log(result3)
+
+        //replace() 替换子串
+        const txt = 'Python is the most beautiful language'
+        Repla = txt.replace(/Python/,'JS')
+        console.log(Repla)
+
+        //[]
+        const pat = /[Aa]pple|[Bb]anana/g
+        const txt1 = 'Apple and banana are fruits. An old cliche says an apple a day keeps the  doctor way has been replaced by a banana a day keeps the doctor far far away.'
+        matches = txt1.match(pat)
+        console.log(matches)
+        
+        //\
+        const patt = /\d/g
+        const txt2 = 'This regular expression example was made in January 12,  2020.'
+        const matches1 = txt2.match(patt)
+        console.log(matches1)
+
+        //+
+        const patt1 = /\d+/g
+        const txt3 = 'This regular expression example was made in January 12,  2020.'
+        const matches2 = txt3.match(patt1)
+        console.log(matches2)
+
+        // /b
+        const txt4 = 'This regular expression example was made in December 6,  2019.'
+        const patt2 = /\b\w{4}\b/g
+        const matches3 = txt4.match(patt2)
+        console.log(matches3)
+
+        const patt3 = /\b[a-zA-Z]{4}\b/g
+        console.log(txt4.match(patt3))
+
+        const patt4 = /\d{4}/
+        console.log(txt4.match(patt4))
+
+        const text = "He laughed hahahaha";
+
+
+        console.log( text.match(/ha+/) ); 
+        console.log( text.match(/(ha)+/) ); 
+
+
+
+
+    </script>
+</body>
+</html>
