@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台对象方法</title>
+</head>
+<body>
+    <script>
+        console.log('%d %s of JS',30,'Days')
+        //CSS
+        console.log('%c30 Days of JS','color:green')
+        console.log('%c30 Days%c %cof%c %cJS%c','color:green','','color:red','','color:yellow')
+        //warn
+        console.warn('this is a warning')
+        //error
+        console.error('this is a error')
+        //table
+        const names = ['a','b','c','d']
+        console.table(names)
+        const user ={
+            name:1,
+            title:2,
+            city:3
+        }
+        console.table(user)
+        const user1 = [
+            ['Finland', 'Helsinki'],
+            ['Sweden', 'Stockholm'],
+            ['Norway', 'Oslo']
+            ]
+        console.table(user1)
+        //time
+        console.time(1)
+        for(let i  = 0; i < user1.length; i++){
+            console.log(user1[i][0], user1[i][1])
+        }
+        console.timeEnd(1)
+        //info
+        console.info('30 days')
+        //assert
+        console.assert(4 > 1, '4>1')
+        console.assert(4 < 1, '4<1')
+        //group
+        console.group('user')
+        console.log(user)
+        console.groupEnd('user')
+
+        console.group('user1')
+        console.log(user1)
+        console.groupEnd('user1')
+    </script>
+</body>
+</html>
