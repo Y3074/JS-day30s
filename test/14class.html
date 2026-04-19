@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class 
+        //类的定义
+        class person{
+            constructor(first = 'e',last = 'f', score){
+                this.first = first
+                this.last = last
+                this.score = 0
+                
+            }
+            getfullname(){
+                return this.first + this.last
+            }
+            get getScore(){
+                return this.score
+            }
+            set setScore(s){
+                this.score += s
+            }
+            getpersoninfo(){
+                let fullname = this.getfullname(
+                let skill = this.skill.length > 0 && this.skill.slice(0,this.skill.length-1).jpin(',') + 
+            }
+        }
+        //类的实现 对象
+        const person1 = new person('a','b')
+        const person2 = new person('c','d')
+        const person3 = new person()
+        console.log(person1.first)
+        console.log(person3.first,person3.last)
+        //构造器 传参
+        //默认值
+        //方法
+        console.log(person3.getfullname())
+        //get/set
+        console.log(person3.getScore)
+        person3.setScore = 1
+        console.log(person3.getScore,person3.score)
+    </script>
+</body>
+</html>
