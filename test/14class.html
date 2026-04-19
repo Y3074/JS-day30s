@@ -9,41 +9,97 @@
     <script>
         //class 
         //类的定义
+        // class person{
+        //     constructor(first = 'e',last = 'f', score,country,skill,age = 18){
+        //         this.first = first
+        //         this.last = last
+        //         this.score = 0
+        //         this.country = country
+        //         this.skill = []
+        //         this.age = age
+        //     }
+        //     getfullname(){
+        //         return this.first + this.last
+        //     }
+        //     get getScore(){
+        //         return this.score
+        //     }
+        //     set setScore(s){
+        //         this.score += s
+        //     }
+        //     getpersoninfo(){
+        //         let fullname = this.getfullname()
+        //         let skill = this.skill.length > 0 && this.skill.slice(0,this.skill.length - 1).join(',') + ` and ${this.skill[this.skill.length - 1]}`
+        //         let formattedskill = skill ? `He knows ${skills}` : ''
+        //         let info = `${fullname} is ${this.age}. He lives ${this.city}, ${this.country}`
+        //         return info
+        //     }
+        //     static favorit(){
+        //         const skills = ['html','css','js','react']
+        //         const index = Math.floor(Math.random() * skills.length)
+        //         return skills[index]
+        //     }
+        //     static showtime(){
+        //         let now = new Date()
+        //         let year = now.getFullYear()
+        //         let mon = now.getMonth()
+        //         let date = now.getDate()
+        //         let hours = now.getHours()
+        //         let min = now.getMinutes()
+        //         let second = now.getSeconds()
+        //         if(hours < 10){
+        //             hours = '0' + hours
+        //         }
+        //         if(min < 10){
+        //             min = '0' + min
+        //         }
+        //         let dmy = date + '.' + mon + '.' + year
+        //         let time = hours + ':' + min + ':' + second
+        //         let fulltime = dmy + ' ' + time
+        //         return fulltime
+        //     }
+        //     say(){
+        //         console.log('I am a father')
+        //     }
+        // }
+        // //类的实现 对象
+        // const person1 = new person('a','b')
+        // const person2 = new person('c','d')
+        // const person3 = new person()
+        // console.log(person1.first)
+        // console.log(person3.first,person3.last)
+        // //构造器 传参
+        // //默认值
+        // //方法
+        // console.log(person3.getfullname())
+        // //get/set
+        // console.log(person3.getScore)
+        // person3.setScore = 1
+        // console.log(person3.getScore,person3.score)
+        // console.log(person1.getpersoninfo())
+        // console.log(person2.getpersoninfo())
+        // console.log(person3.getpersoninfo())
+        // console.log(person.favorit())
+        // console.log(person.showtime())
+
+        // class child extends person{
+        //     constructor(first,last, score,country,skill,age,gender){
+        //         super(first,last, score,country,skill,age)
+        //         this.gender = gender
+        //     }
+        //     say(){
+        //         console.log('I am a child')
+        //     }
+        // }
+        // const s1 = new child('123')
+        // console.log(s1.getfullname())
+        // console.log(s1.say())
+        // console.log(person1.say())
         class person{
-            constructor(first = 'e',last = 'f', score){
-                this.first = first
-                this.last = last
-                this.score = 0
+            constructor(){
                 
             }
-            getfullname(){
-                return this.first + this.last
-            }
-            get getScore(){
-                return this.score
-            }
-            set setScore(s){
-                this.score += s
-            }
-            getpersoninfo(){
-                let fullname = this.getfullname(
-                let skill = this.skill.length > 0 && this.skill.slice(0,this.skill.length-1).jpin(',') + 
-            }
         }
-        //类的实现 对象
-        const person1 = new person('a','b')
-        const person2 = new person('c','d')
-        const person3 = new person()
-        console.log(person1.first)
-        console.log(person3.first,person3.last)
-        //构造器 传参
-        //默认值
-        //方法
-        console.log(person3.getfullname())
-        //get/set
-        console.log(person3.getScore)
-        person3.setScore = 1
-        console.log(person3.getScore,person3.score)
     </script>
 </body>
 </html>
