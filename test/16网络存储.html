@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //存字符串
+        localStorage.setItem('last','value')
+        localStorage.setItem('first','yinmengqi')
+        console.log(localStorage)
+        //存数字
+        localStorage.setItem('age',10)
+        console.log(localStorage)
+        //存数组或对象
+        const skill = ['HTML', 'CSS', 'JS', 'React']
+        const skillSON = JSON.stringify(skill,undefined,4)
+        localStorage.setItem('skill',skillSON)
+        console.log(localStorage)
+
+        //取
+        let skills = localStorage.getItem('skill')
+        console.log(skills)
+        console.log(JSON.parse(skills))
+        //删
+        localStorage.removeItem('skill')
+        console.log(localStorage)
+        //显示
+        console.log(localStorage.key(0),localStorage.key(1),localStorage.key(2))
+        localStorage.clear()
+
+    </script>
+</body>
+</html>
