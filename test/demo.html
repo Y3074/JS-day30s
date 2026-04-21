@@ -7,7 +7,16 @@
 </head>
 <body>
     <script>
-        
+    localStorage.setItem('first','123')
+    localStorage.setItem('last','456') 
+    console.log(localStorage.getItem('first'))
+    console.log(localStorage.getItem('last'))
+    console.log(localStorage)
+    localStorage.removeItem('first')
+    console.log(localStorage)
+    console.log(localStorage.key(0))
+    localStorage.clear()    
+
     </script>
 </body>
 </html>
