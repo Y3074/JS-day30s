@@ -7,15 +7,15 @@
 </head>
 <body>
     <script>
-    localStorage.setItem('first','123')
-    localStorage.setItem('last','456') 
-    console.log(localStorage.getItem('first'))
-    console.log(localStorage.getItem('last'))
-    console.log(localStorage)
-    localStorage.removeItem('first')
-    console.log(localStorage)
-    console.log(localStorage.key(0))
-    localStorage.clear()    
+    console.log("第一步：开始点餐");
+
+// setTimeout 是一个用来模拟“等待”的异步函数
+// 这里的 0 代表等待 0 毫秒（也就是不等待，立刻执行）
+setTimeout(() => {
+    console.log("第二步：后厨做好了，取餐！");
+}, 0);
+
+console.log("第三步：我先去找个座位坐下");  
 
     </script>
 </body>
