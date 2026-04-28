@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="title" id="first-title">first title</h1>
+    <h1 class="title" id="second-title">second title</h1>
+    <h1 class="title" id="third-title">third titile</h1>
+    <h1></h1>
+    <script>
+    //     const tit = document.getElementsByTagName('h1')
+    //     console.log(tit)
+    //     console.log(tit.length)
+
+    //     for(let i = 0; i < tit.length; i++){
+    //         console.log(tit[i])
+    //     }
+    //     const tit1 = document.getElementsByClassName('title')
+    //     console.log(tit1)
+    //     console.log(tit1.length)
+
+    //     for(let i = 0; i < tit1.length; i++){
+    //         console.log(tit1[i])
+    //     }
+    //     const tit2 = document.getElementById('first-title')
+    //     console.log(tit2)
+
+    //     let tit3 = document.querySelector('h1')
+    //     console.log(tit3)
+
+    //     let tit4 = document.querySelectorAll('h1')
+    //     console.log(tit4)
+
+    //     tit4[3].className = 'title'
+    //     tit4[3].id = 'fourth-title'
+    //     console.log(tit4)
+
+    //     tit4[3].setAttribute('class','title')
+    //     tit4[3].setAttribute('id','fourth-title')
+    //     tit4[3].classList.remove('title')
+    //     tit4[3].classList.add('four-title')
+
+
+    //     tit4[3].textContent = 'Fourth Title'
+    //     console.log(tit4)
+    //     //内部HTML
+    //     const lists = `
+    // <li>30DaysOfPython Challenge Done</li>
+    //         <li>30DaysOfJavaScript Challenge Ongoing</li>
+    //         <li>30DaysOfReact Challenge Coming</li>
+    //         <li>30DaysOfFullStack Challenge Coming</li>
+    //         <li>30DaysOfDataAnalysis Challenge Coming</li>
+    //         <li>30DaysOfReactNative Challenge Coming</li>
+    //         <li>30DaysOfMachineLearning Challenge Coming</li>`
+    //     const ul = document.querySelector('.four-title')
+    //     console.log(ul)
+    //     ul.innerHTML = lists
+    //     ul.innerHTML = ''
+    //     console.log(tit4)
+           const tit5 = document.querySelectorAll('h1')
+           tit5.forEach((title,i) => {
+                title.style.fontSize = '24px'
+                if(i % 2 === 0){
+                    title.style.color = 'green'
+                    title.style.backgroundColor = 'yellow'
+                    title.style.fontSize = '20px'
+                }else{
+                    title.style.colot = 'red'
+                    title.style.backgroundColor = 'red'
+                    title.style.fontSize = '30px'
+                }
+           });
+
+           
+
+
+
+    </script>
+</body>
+</html>
