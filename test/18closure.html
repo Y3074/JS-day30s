@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outer(){
+            let count = 0
+            function inner(){
+                count++
+                return count
+            }
+            return inner
+        }
+        const outerfun = outer()
+        console.log(outerfun())
+        console.log(outerfun())
+        console.log(outerfun())
+
+        function outer1(){
+            let count = 0
+            function first(){
+                count++
+                return count
+            }
+            function last(){
+                count--
+                return count
+            }
+            return {
+                first:first, // first()
+                last:last //last()
+            }
+        }
+        const outerfun2 = outer1()
+        console.log(outerfun2.first())
+        console.log(outerfun2.first())
+        console.log(outerfun2.last())
+        console.log(outerfun2.last())
+    </script>
+</body>
+</html>

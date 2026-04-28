@@ -7,16 +7,49 @@
 </head>
 <body>
     <script>
-    console.log("第一步：开始点餐");
+        //回调
+    const dosom = callback =>{
+        setTimeout(()=>{
+            const skill = ['1','2','3']
+            callback('did not go well',skill)
+        },2000)
+    }
+    const callback = (err,result) =>{
+        if(err) return console.log(err)
+        return console.log(result)
+    }
+    dosom(callback)
+        //promise
+        const dopro = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                const skills = ['1','2']
+                if(skills.length > 0)
+                    resolve(skills)
+                else reject('something wrong')
+            },2000)
+        })
+        dopro
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
 
-// setTimeout 是一个用来模拟“等待”的异步函数
-// 这里的 0 代表等待 0 毫秒（也就是不等待，立刻执行）
-setTimeout(() => {
-    console.log("第二步：后厨做好了，取餐！");
-}, 0);
+        //API
+        const url = 'https://restcountries.com/v2/all'
+        fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+        //异步与等待
 
-console.log("第三步：我先去找个座位坐下");  
-
+        const fetchdata = async() =>{
+            try{
+                const res = await fetch(url)
+                const coun = await res.json()
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        fetchdata()
     </script>
 </body>
 </html>
